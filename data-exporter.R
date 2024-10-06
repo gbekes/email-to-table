@@ -102,7 +102,7 @@ emails_df <- emails_df[rowSums(is.na(emails_df)) != ncol(emails_df), ]
 
 # Write to a CSV file
 timestamp <- format(Sys.time(), "%Y%m%d")
-output_filename <- paste0("newsletter_data_", timestamp, ".csv")
+output_filename <- paste0("data-analysis_", timestamp, ".csv")
 write.csv(emails_df, file = output_filename, row.names = FALSE, quote = TRUE)
 
 # Print summary
